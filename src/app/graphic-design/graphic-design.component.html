@@ -1,0 +1,52 @@
+<mat-card class="mat-app-design-banner-container">
+    <mat-card-content class="mat-web-design-banner-container-text">
+        <p class="mat-app-design-banner-header"> Graphic Design</p>
+
+        <p class="mat-app-design-banner-text"> We deliver eye-catching branding materials that are 
+            tailored to meet your business objectives. </p>
+    </mat-card-content>
+</mat-card>
+<div class="app-card">
+    <mat-grid-list cols="3" row="1" rowHeight="500px"  class="app-design-grid-card">
+        @for (tile of tiles; track tile) {
+        <mat-grid-tile>
+            <mat-card class="app-design-card" [style.background]="tile.color">
+                <img mat-card-image class="app-design-card-image" [src]="tile.image" alt="{{ tile.header }}">
+                <div class="app-design-card-container">
+                    <mat-card-header class="app-design-card-header">
+                        <mat-card-title [innerHTML]="tile.header"></mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="app-design-card-text" [innerHTML]="tile.text">
+
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+        }
+    </mat-grid-list>
+</div>
+<div class="section-dual-design">
+<div class="section-graphic-app-design">
+    <div class="left-section">
+      <mat-card class="left-section-container">
+        <mat-card-content class="r-toverlay">
+          <p>App Design</p>
+         <p>View Projects</p>
+        </mat-card-content>      
+      </mat-card>
+    </div>
+    </div>
+    <div class="right-section">
+        <div class="r-section-bottom">
+            <mat-card class="r-bcontainer">
+              <mat-card-content class="r-boverlay">
+                <p>Web Design</p>
+               <p>View Projects</p>
+              </mat-card-content>      
+            </mat-card>
+          </div>
+    </div>
+ 
+  </div>  
+
+<app-footer></app-footer>

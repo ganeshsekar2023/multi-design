@@ -1,0 +1,41 @@
+<div class="section-about">
+    <mat-card class="section-about-card">
+        <mat-card-content class="card-content-about">
+            <div>
+                <mat-card-title class="card-about-title">Let’s talk about your project</mat-card-title>
+
+                <p>Ready to take it to the next level? Contact us today and find out
+                    how our expertise can help your business grow.</p>
+            </div>
+            <div class="section-about-btn">
+                <button mat-button class="btn-about">GET IN TOUCH</button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
+<div class="footer">
+    <div class="footer-container">
+        <mat-toolbar class="footer-nav">
+            <div class="circle">
+                <p class="circle-span">DESIGNO</p>
+            </div>
+            <div class="footer-nav-list">
+                <p class="circle-p">Our Company</p>
+                <p class="circle-p">Locations</p>
+                <p class="circle-p">Contact</p>
+            </div>
+        </mat-toolbar>
+        <mat-divider class="footer-divider"></mat-divider>
+        <mat-grid-list cols="4" rowHeight="100px" class="footer-grid">
+            @for (tile of tiles; track tile) {
+            <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+                <div class="grid-text" [innerHTML]="tile.text"></div>
+
+            </mat-grid-tile>
+            }
+        </mat-grid-list>
+    </div>
+</div>

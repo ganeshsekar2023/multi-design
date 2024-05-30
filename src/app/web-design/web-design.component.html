@@ -1,0 +1,52 @@
+<mat-card class="mat-web-design-banner-container">
+    <mat-card-content class="mat-web-design-banner-container-text">
+        <p class="mat-web-design-banner-header"> Web Design</p>
+
+        <p class="mat-web-design-banner-text"> We build websites that serve as powerful marketing tools
+            and bring memorable brand experiences. </p>
+    </mat-card-content>
+</mat-card>
+<div class="web-card">
+    <mat-grid-list cols="3" row="1" rowHeight="500px" gutterSize="20px" class="web-design-grid-card">
+        @for (tile of tiles; track tile) {
+        <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows">
+            <mat-card class="web-design-card" [style.background]="tile.color">
+                <img mat-card-image class="web-design-card-image" [src]="tile.image" alt="{{ tile.header }}">
+                <div class="web-design-card-container">
+                    <mat-card-header class="web-design-card-header">
+                        <mat-card-title [innerHTML]="tile.header"></mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="web-design-card-text" [innerHTML]="tile.text">
+
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+        }
+    </mat-grid-list>
+</div>
+<div class="section-dual-design">
+<div class="left-section">
+    <div class="r-section-top">
+      <mat-card class="r-tcontainer">
+        <mat-card-content class="r-toverlay">
+          <p>App Design</p>
+         <p>View Projects</p>
+        </mat-card-content>      
+      </mat-card>
+    </div>
+    </div>
+    <div class="right-section">
+        <div class="r-section-bottom">
+            <mat-card class="r-bcontainer">
+              <mat-card-content class="r-boverlay">
+                <p>Graphic Design</p>
+               <p>View Projects</p>
+              </mat-card-content>      
+            </mat-card>
+          </div>
+    </div>
+ 
+  </div>  
+
+<app-footer></app-footer>
