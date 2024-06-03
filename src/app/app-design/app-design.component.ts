@@ -21,7 +21,8 @@ export interface Card {
   selector: 'app-app-design',
   standalone: true,
   imports: [    MatCardModule, MatGridListModule, CommonModule, FooterComponent
-  ],  templateUrl: './app-design.component.html',
+  ], 
+   templateUrl: './app-design.component.html',
   styleUrl: './app-design.component.css'
 })
 export class AppDesignComponent {
